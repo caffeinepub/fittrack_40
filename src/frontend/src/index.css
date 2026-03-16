@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark sports performance theme */
+    --background: 0.09 0.012 265;
+    --foreground: 0.95 0.005 265;
+
+    --card: 0.13 0.015 265;
+    --card-foreground: 0.95 0.005 265;
+
+    --popover: 0.13 0.015 265;
+    --popover-foreground: 0.95 0.005 265;
+
+    /* Electric lime-green primary */
+    --primary: 0.84 0.22 140;
+    --primary-foreground: 0.1 0.02 265;
+
+    --secondary: 0.18 0.02 265;
+    --secondary-foreground: 0.85 0.005 265;
+
+    --muted: 0.16 0.015 265;
+    --muted-foreground: 0.55 0.01 265;
+
+    --accent: 0.84 0.22 140;
+    --accent-foreground: 0.1 0.02 265;
+
+    --destructive: 0.62 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.22 0.018 265;
+    --input: 0.22 0.018 265;
+    --ring: 0.84 0.22 140;
+
+    --radius: 0.75rem;
+
+    /* Charts */
+    --chart-1: 0.84 0.22 140;
+    --chart-2: 0.72 0.18 200;
+    --chart-3: 0.75 0.18 55;
+    --chart-4: 0.7 0.18 280;
+    --chart-5: 0.62 0.22 25;
+
+    /* Sidebar */
+    --sidebar: 0.1 0.012 265;
+    --sidebar-foreground: 0.85 0.005 265;
+    --sidebar-primary: 0.84 0.22 140;
+    --sidebar-primary-foreground: 0.1 0.02 265;
+    --sidebar-accent: 0.16 0.018 265;
+    --sidebar-accent-foreground: 0.85 0.005 265;
+    --sidebar-border: 0.22 0.018 265;
+    --sidebar-ring: 0.84 0.22 140;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px oklch(0.84 0.22 140 / 0.3), 0 0 40px
+      oklch(0.84 0.22 140 / 0.1);
+  }
+
+  .glow-primary-sm {
+    box-shadow: 0 0 10px oklch(0.84 0.22 140 / 0.25);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px oklch(0.84 0.22 140 / 0.5);
+  }
+
+  .card-elevated {
+    background: oklch(0.13 0.015 265);
+    border: 1px solid oklch(0.22 0.018 265);
+    box-shadow: 0 4px 24px oklch(0 0 0 / 0.4);
+  }
+
+  .progress-ring-track {
+    stroke: oklch(0.22 0.018 265);
+  }
+
+  .progress-ring-fill {
+    stroke: oklch(0.84 0.22 140);
+    filter: drop-shadow(0 0 6px oklch(0.84 0.22 140 / 0.6));
+  }
+}
